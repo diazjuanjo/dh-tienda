@@ -1,5 +1,6 @@
 
 php artisan storage:link
-php artisan migrate:refresh --seed
+php artisan migrate:fresh
+php artisan db:seed
 
 
