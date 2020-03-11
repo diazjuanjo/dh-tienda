@@ -1,0 +1,141 @@
+[{
+        "descripcion": "Galletitas Chocolate Chocolinas",
+        "precio": 55,
+        "presentacion": "170 gr",
+        "nombre": "Chocolinas",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790040929906.jpg"
+    },
+    {
+        "descripcion": "Cafe Instantaneo Suave NesCafe Dolca",
+        "precio": 269.9,
+        "presentacion": "170 gr",
+        "nombre": "Nescafé",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7613035067837.jpg"
+    },
+    {
+        "descripcion": "Galletitas de Vainilla Sabor Frutilla Merengadas",
+        "precio": 44,
+        "presentacion": "93 gr",
+        "nombre": "Merengadas",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790040932708.jpg"
+    },
+    {
+        "descripcion": "Caldo de Verduras Wilde",
+        "precio": 45.9,
+        "presentacion": "12 un",
+        "nombre": "Wilde",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7794000597723.jpg"
+    },
+    {
+        "descripcion": "Mayonesa Light Doypack Hellmanns",
+        "precio": 55.9,
+        "presentacion": "237 gr",
+        "nombre": "Hellmann's",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7794000960145.jpg"
+    },
+    {
+        "descripcion": "Galletitas Sabor Vainilla con Relleno de Limon Mellizas",
+        "precio": 44,
+        "presentacion": "112 gr",
+        "nombre": "Mellizas",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790040930209.jpg"
+    },
+    {
+        "descripcion": "Cafe Instantaneo Torrado Dolca NesCafe",
+        "precio": 208.9,
+        "presentacion": "170 gr",
+        "nombre": "Nescafé",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7613034235404.jpg"
+    },
+    {
+        "descripcion": "Sal Gruesa en Paquete Celusal",
+        "precio": 44.5,
+        "presentacion": "1 kg",
+        "nombre": "Celusal",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7791004000099.jpg"
+    },
+    {
+        "descripcion": "Picadillo de Carne en Lata Swift",
+        "precio": 31.38,
+        "presentacion": "90 gr",
+        "nombre": "Swift",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790360720115.jpg"
+    },
+    {
+        "descripcion": "Mermelada de Naranja Light Frasco Arcor",
+        "precio": 87.5,
+        "presentacion": "390 gr",
+        "nombre": "Arcor",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790580511609.jpg"
+    },
+    {
+        "descripcion": "Galletitas Vainilla Lincoln Angry Birds",
+        "precio": 60,
+        "presentacion": "153 gr",
+        "nombre": "Lincoln",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7622300829643.jpg"
+    },
+    {
+        "descripcion": "Mermelada de Frutilla La Campagnola",
+        "precio": 119,
+        "presentacion": "454 gr",
+        "nombre": "La campagnola",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7793360800900.jpg"
+    },
+    {
+        "descripcion": "Galletitas Rellena Amor",
+        "precio": 44,
+        "presentacion": "112 gr",
+        "nombre": "Bagley",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790040930407.jpg"
+    },
+    {
+        "descripcion": "Fideos Tirabuzones Lucchetti",
+        "precio": 51.9,
+        "presentacion": "500 gr",
+        "nombre": "Lucchetti",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790070318329.jpg"
+    },
+    {
+        "descripcion": "Fideos Spaghetti Lucchetti",
+        "precio": 52,
+        "presentacion": "500 gr",
+        "nombre": "Lucchetti",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790070318282.jpg"
+    },
+    {
+        "descripcion": "Pate de Foie Swift Lata",
+        "precio": 43.49,
+        "presentacion": "90 gr",
+        "nombre": "Swift",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790360720382.jpg"
+    },
+    {
+        "descripcion": "Yerba Mate con Hierbas Serranas Cbse",
+        "precio": 156.8,
+        "presentacion": "1 kg",
+        "nombre": "Cbse",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790710000126.jpg"
+    },
+    {
+        "descripcion": "Salsa Portuguesa Doypack Arcor",
+        "precio": 37,
+        "presentacion": "340 gr",
+        "nombre": "Arcor",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790580956400.jpg"
+    },
+    {
+        "descripcion": "Fideos Tallarin Don Vicente",
+        "precio": 79.05,
+        "presentacion": "500 gr",
+        "nombre": "Don vicente",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790070318114.jpg"
+    },
+    {
+        "descripcion": "Galletitas Clasicas Mediatarde Pack 3 Un",
+        "precio": 52,
+        "presentacion": "330 gr",
+        "nombre": "Media tarde",
+        "imagen": "https://challenge-api.aerolab.co/static/products/7790270336307.jpg"
+    }
+]
