@@ -17,4 +17,5 @@ class Order extends Model
     public function items(){
         return $this->hasMany('App\Item','order_id');
     }
+
 }

@@ -66,18 +66,29 @@
                     </li>
                     @endif
                     @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/')}}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/carrito')}}">Carrito</a>
+                    </li>
+                    @if(auth()->user()->rol == 'admin')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/admin/products')}}">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{url('/admin/categories')}}">Categorias</a>
+                    </li>
+                    
+                    @endif
+
+
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->nombre  }} <span class="caret"></span>
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{url('/')}}">Inicio</a>
-                            <a class="dropdown-item" href="{{url('/home')}}">Dashboard</a>
-                            @if(auth()->user()->rol == 'admin')
-                            <a class="dropdown-item" href="{{url('/admin/products')}}">Gestionar Productos</a>
-                            <a class="dropdown-item" href="{{url('/admin/categories')}}">Gestionar Categorias</a>
-                            @endif
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Cerrar sesión') }}
@@ -86,7 +97,7 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
-                        <!-- </div> -->
+                            <!-- </div> -->
                     </li>
                     @endguest
                 </ul>

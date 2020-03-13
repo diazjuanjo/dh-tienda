@@ -11,11 +11,6 @@
             <a class="text-dark" href="{{url('/')}}">
                 <h1 class="my-4">Shop</h1>
             </a>
-            <!-- <form class="form-inline my-2 my-lg-0" method="get" action="{{url('/search')}}">
-            @csrf
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="query">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form> -->
             <div class="list-group">
                 @foreach($categories as $category)
                 <a href="{{url('/categories/'.$category->id)}}" class="list-group-item">{{$category->nombre}}</a>
@@ -67,7 +62,7 @@
                             <p class="card-text">{{$product->descripcion}}</p>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">{{$product->category?$product->category->nombre:''}}</small>
+                            <small class="text-muted">{{$product->category_nombre}}</small>
                         </div>
                     </div>
                 </div>
@@ -91,7 +86,7 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+        <p class="m-0 text-center text-white">Emanuel Yune - Juanjo Diaz</p>
     </div>
     <!-- /.container -->
 </footer>

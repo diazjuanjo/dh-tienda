@@ -22,7 +22,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/carrito', 'CarritoController@index');
+Route::get('/order', 'OrderController@index');
+Route::get('/order/{id}', 'OrderController@show');
 Route::get('/products/{id}','Product2Controller@show'); 
 Route::post('/item','ItemController@store');
 Route::delete('/item','ItemController@destroy');

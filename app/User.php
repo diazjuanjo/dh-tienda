@@ -43,15 +43,20 @@ class User extends Authenticatable
     }
 
     public function getOrderAttribute(){
-        $order = $this->orders()->where('estado','activo')->first();
+        $order = $this->orders()->where('estado','carrito')->first();
         if($order)
             return $order;
         $order = new Order();
-        $order->estado = 'activo';
+        $order->estado = 'carrito';
         $order->user_id = $this->id;
         
         $order->save();
 
         return $order;
     }
+    public function getOrdersAttribute(){
+        $orders = $this->orders()->where('estado','pedido')->get();
+        return $orders;
+    }
+
 }

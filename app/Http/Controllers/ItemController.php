@@ -26,7 +26,7 @@ class ItemController extends Controller
 
         $item->save();
         
-        return back();
+        return redirect(url('/'));
     }
 
     public function destroy(Request $request){

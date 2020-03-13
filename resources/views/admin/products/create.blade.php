@@ -7,7 +7,7 @@
             <div class="card">
 
                 <div class="card-body">
-                    <form method="POST" action="{{ url('/admin/products') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ url('/admin/products') }}" enctype="multipart/form-data" id="formProductCreate">
                         @csrf
 
 
@@ -15,7 +15,7 @@
                             <label for="category_id" class="col-md-4 col-form-label text-md-right">Categoria</label>
 
                             <div class="col-md-6">
-                                <select name="category_id" id="" class="form-control">
+                                <select name="category_id" id="selectCategory" class="form-control">
                                     <option value="0">General</option>
                                     @foreach($categories as $category)
                                     <option value="{{$category->id}}">{{$category->nombre}}</option>
@@ -107,4 +107,5 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('js/productCreate.js') }}" defer></script>
 @endsection

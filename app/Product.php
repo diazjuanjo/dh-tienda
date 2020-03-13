@@ -24,4 +24,10 @@ class Product extends Model
         }
         return '/storage/'.$this->imagen;
     }
+    public function getCategoryNombreAttribute(){
+        if($this->category){
+            return $this->category->nombre;
+        }
+        return 'General';
+    }
 }
