@@ -26,7 +26,7 @@
                     <th>Opciones</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody">
                 @foreach(auth()->user()->order->items as $item)
                 <tr>
                     <th><img src="{{$item->product->Url}}" height="50"></th>
@@ -54,16 +54,17 @@
                 @endforeach
             </tbody>
         </table>
+        @if(count(auth()->user()->order->items) != 0)
         <div class="d-flex align-content-center">
-            <form method="post" action="{{url('/order')}}">
+            <form method="post" action="{{url('/order')}}" id="formCarrito">
                 @csrf
                 <button type="submit" class="btn btn-success">Realizar pedido</button>
             </form>
         </div>
+        @endif
     </div>
     <!-- /.row -->
 
 </div>
 <!-- /.container -->
-
 @endsection
