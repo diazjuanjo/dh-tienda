@@ -58,5 +58,9 @@ class User extends Authenticatable
         $orders = $this->orders()->where('estado','pedido')->get();
         return $orders;
     }
+    // public function getShowAttribute($id){
+    //     $item = $this->orders()->items->where('product_id',$id)->first();
 
+    //     return $item;
+    // }
 }

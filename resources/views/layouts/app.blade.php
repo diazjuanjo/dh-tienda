@@ -32,11 +32,11 @@
             <div class="collapse navbar-collapse">
                 <a class="navbar-brand" href="{{url('/')}}">Inicio</a>
             </div>
-            <div>
+            <!-- <div>
                 <form class="form-inline" method="get" action="{{url('/search')}}">
                     @csrf
                     <div class="input-group">
-                        <input class="form-control" type="text" placeholder="..." aria-label="Search" name="query">
+                        <input class="form-control" type="text" placeholder="Que buscas?" aria-label="Search" name="query">
                         <div class="input-group-append">
                             <button class="btn btn-success" type="submit">
                                 <i class="fa fa-search"></i>
@@ -45,7 +45,7 @@
                     </div>
 
                 </form>
-            </div>
+            </div> -->
 
 
 

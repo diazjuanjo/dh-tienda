@@ -6,7 +6,12 @@ use App\Item;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
-{
+{   
+    // public function show($id){
+    //     $item = Item::find($id);
+
+    //     return $item;
+    // }
     public function store(Request $request){
 
         $reglas = [
@@ -43,7 +48,7 @@ class ItemController extends Controller
 
         $item = Item::find($id);
 
-        $item->unidades = $request->input('unidades');
+        $item->unidades = (int)$item->unidades + (int)$request->input('unidades');
 
         $item->save();
         

@@ -17,5 +17,9 @@ class Order extends Model
     public function items(){
         return $this->hasMany('App\Item','order_id');
     }
+    public function show($id){
+        $item = $this->items()->where('product_id',$id)->first();
 
+        return $item;
+    }
 }

@@ -21,7 +21,11 @@
         <!-- /.col-lg-3 -->
 
         <div class="col-lg-9">
-
+            <!-- {{auth()->user()->order->items}}
+            <br>
+            {{auth()->user()->order->show($product->id)->id}}
+            <br>
+            {{$product->id}} -->
             <div class="card mt-4">
                 <img class="card-img-top img-fluid" src="{{$product->Url}}" alt="">
                 <div class="card-body">
@@ -49,6 +53,18 @@
                                 <span aria-hidden="true">×</span>
                             </button>
                         </div>
+                        @if (auth()->user()->order->show($product->id))
+                        <form action="{{url('/item/'.auth()->user()->order->show($product->id)->id)}}" method="post">
+                            @csrf
+                            <div class="modal-body">
+                                <input type="number" name="unidades" id="unidades" value="1" class="form-control">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Añadir al carrito</button>
+                            </div>
+                        </form>
+                        @else
                         <form action="{{url('/item')}}" method="post">
                             @csrf
                             <input type="hidden" name="product_id" value="{{$product->id}}">
@@ -60,7 +76,7 @@
                                 <button type="submit" class="btn btn-primary">Añadir al carrito</button>
                             </div>
                         </form>
-
+                        @endif
                     </div>
                 </div>
             </div>

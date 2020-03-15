@@ -27,6 +27,7 @@ Route::get('/order', 'OrderController@index');
 Route::get('/order/{id}', 'OrderController@show');
 Route::get('/products/{id}','Product2Controller@show'); 
 Route::post('/item','ItemController@store');
+Route::post('/item/{id}','ItemController@update');
 Route::delete('/item','ItemController@destroy');
 Route::post('/order','OrderController@update');
 Route::get('/categories/{id}','Category2Controller@show');
