@@ -50,4 +50,11 @@ Route::middleware(['auth','admin'])->group(function(){
     Route::get('/admin/categories/{id}/edit','CategoryController@edit'); //formulario edicion
     Route::post('/admin/categories/{id}/edit','CategoryController@update'); // actualizar
     Route::post('/admin/categories/{id}/delete','CategoryController@destroy'); // form eliminar
+
+    Route::get('/admin/users','UserController@index'); // listado
+    Route::get('/admin/users/create','UserController@create'); // formulario
+    Route::post('/admin/users','UserController@store'); // registrar
+    Route::get('/admin/users/{id}/edit','UserController@edit'); //formulario edicion
+    Route::post('/admin/users/{id}/edit','UserController@update'); // actualizar
+    Route::post('/admin/users/{id}/delete','UserController@destroy'); // form eliminar
 });
