@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
+use App\Item;
 use App\Product;
 
 class Order extends Model
@@ -18,6 +18,7 @@ class Order extends Model
         return $this->hasMany('App\Item','order_id');
     }
     public function show($id){
+        $item = new Item();
         $item = $this->items()->where('product_id',$id)->first();
 
         return $item;
