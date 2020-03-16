@@ -21,11 +21,6 @@
         <!-- /.col-lg-3 -->
 
         <div class="col-lg-9">
-            <!-- {{auth()->user()->order->items}}
-            <br>
-            {{auth()->user()->order->show($product->id)}}
-            <br>
-            {{$product->id}} -->
             <div class="card mt-4">
                 <img class="card-img-top img-fluid" src="{{$product->Url}}" alt="">
                 <div class="card-body">
@@ -42,7 +37,6 @@
             <button type="button" class="btn btn-success my-4" data-toggle="modal" data-target="#exampleModalCentered">
                 Añadir al carrito
             </button>
-            @endif
             <!-- Modal -->
             <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -73,7 +67,7 @@
                     </div>
                 </div>
             </div>
-
+            @endif
 
         </div>
         <!-- /.col-lg-9 -->
