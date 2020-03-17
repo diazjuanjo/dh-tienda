@@ -36,6 +36,7 @@ Route::get('/search','SearchController@show');
 
 
 
+
 Route::middleware(['auth','admin'])->group(function(){
     Route::get('/admin/products','ProductController@index'); // listado
     Route::get('/admin/products/create','ProductController@create'); // formulario
@@ -56,5 +57,6 @@ Route::middleware(['auth','admin'])->group(function(){
     Route::post('/admin/users','UserController@store'); // registrar
     Route::get('/admin/users/{id}/edit','UserController@edit'); //formulario edicion
     Route::post('/admin/users/{id}/edit','UserController@update'); // actualizar
+    Route::get('/admin/users/{id}/orders','UserController@show'); // actualizar
     Route::post('/admin/users/{id}/delete','UserController@destroy'); // form eliminar
 });

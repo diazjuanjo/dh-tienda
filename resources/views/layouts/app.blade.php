@@ -79,6 +79,9 @@
                     <li class="nav-item">
                     <a class="nav-link" href="{{url('/admin/categories')}}">Categorias</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/admin/users')}}">Usuarios</a>
+                    </li>
                     
                     @endif
 
