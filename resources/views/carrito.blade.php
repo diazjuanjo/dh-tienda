@@ -27,13 +27,21 @@
                 </tr>
             </thead>
             <tbody id="tbody">
+                <?php 
+                    $subtotal = 0;
+                    $total = 0;
+                ?>
                 @foreach(auth()->user()->order->items as $item)
+                <?php
+                $subtotal = $item->product->precio * $item->unidades;
+                $total += $subtotal;
+                ?>
                 <tr>
                     <th><img src="{{$item->product->Url}}" height="50"></th>
                     <td>{{$item->product->nombre}}</td>
                     <td>{{$item->product->precio}}</td>
                     <td>{{$item->unidades}}</td>
-                    <td>{{$item->product->precio * $item->unidades }}</td>
+                    <td>{{$subtotal}}</td>
                     <td>
                         <div class="d-flex flex-row">
                             <a href="{{url('/products/'.$item->product->id)}}" class="btn btn-primary">
@@ -52,12 +60,23 @@
                     </td>
                 </tr>
                 @endforeach
+                @if(count(auth()->user()->order->items) != 0)
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Total</th>
+                    <th>{{$total}}</th>
+                    <th></th>
+                </tr>
+                @endif
             </tbody>
         </table>
         @if(count(auth()->user()->order->items) != 0)
         <div class="d-flex align-content-center">
             <form method="post" action="{{url('/order')}}" id="formCarrito">
                 @csrf
+                <input type="hidden" name="costo" value="{{$total}}">
                 <button type="submit" class="btn btn-success">Realizar pedido</button>
             </form>
         </div>

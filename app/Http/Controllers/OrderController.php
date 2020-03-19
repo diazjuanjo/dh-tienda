@@ -18,9 +18,10 @@ class OrderController extends Controller
         $items = Item::where('order_id',$id)->get();
         return view('order.show')->with(compact('items'));
     }
-    public function update(){
+    public function update(Request $req){
         $order = auth()->user()->order;
         $order->estado = 'pedido';
+        $order->costo = $req->costo;
         $order->save();
         return redirect(url('/order'));
     }
