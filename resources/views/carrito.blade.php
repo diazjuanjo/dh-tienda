@@ -34,7 +34,7 @@
                 @foreach(auth()->user()->order->items as $item)
                 <?php
                 $subtotal = $item->product->precio * $item->unidades;
-                $total += $subtotal;
+                // $total += $subtotal;
                 ?>
                 <tr>
                     <th><img src="{{$item->product->Url}}" height="50"></th>
@@ -59,6 +59,10 @@
                         </div>
                     </td>
                 </tr>
+                <?php
+                $subtotal = $item->product->precio * $item->unidades;
+                $total += $subtotal;
+                ?>
                 @endforeach
                 @if(count(auth()->user()->order->items) != 0)
                 <tr>

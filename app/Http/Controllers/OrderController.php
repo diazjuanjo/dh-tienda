@@ -25,4 +25,12 @@ class OrderController extends Controller
         $order->save();
         return redirect(url('/order'));
     }
+    public function destroy($id)
+    {
+        $order = Order::find($id);
+
+        $order->delete(); // delete
+
+        return redirect('/admin/orders');
+    }
 }
