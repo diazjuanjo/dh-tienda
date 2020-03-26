@@ -27,20 +27,40 @@
                 </tr>
             </thead>
             <tbody>
+                <?php 
+                    $subtotal = 0;
+                    $total = 0;
+                ?>
                 @foreach($items as $item)
+                <?php
+                $subtotal = $item->product->precio * $item->unidades;
+                // $total += $subtotal;
+                ?>
                 <tr>
                     <th><img src="{{$item->product->Url}}" height="50"></th>
                     <td>{{$item->product->nombre}}</td>
                     <td>{{$item->product->precio}}</td>
                     <td>{{$item->unidades}}</td>
-                    <td>{{$item->product->precio * $item->unidades }}</td>
+                    <td>{{$subtotal}}</td>
                     <td>
                         <a href="{{url('/products/'.$item->product->id)}}" class="btn btn-primary">
                             <i class="fa fa-eye"></i>
                         </a>
                     </td>
                 </tr>
+                <?php
+                // $subtotal = $item->product->precio * $item->unidades;
+                $total += $subtotal;
+                ?>
                 @endforeach
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Total</th>
+                    <th>{{$total}}</th>
+                    <th></th>
+                </tr>
             </tbody>
         </table>
         <div class="d-flex align-content-center">
