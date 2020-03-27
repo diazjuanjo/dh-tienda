@@ -13,8 +13,8 @@
 
 use App\Category;
 use App\Product;
-use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $products = Product::paginate(6);
