@@ -27,7 +27,7 @@
                     <h3 class="card-title">{{$product->nombre}}</h3>
                     <h4>${{$product->precio}}</h4>
                     <p class="card-text">{{$product->descripcion}}</p>
-                    <span class="text-warning">{{$product->category->nombre}}</span>
+                    <span class="text-info">{{$product->category->nombre}}</span>
                 </div>
             </div>
             <!-- /.card -->

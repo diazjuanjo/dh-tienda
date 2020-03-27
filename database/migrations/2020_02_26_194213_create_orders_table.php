@@ -23,6 +23,7 @@ class CreateOrdersTable extends Migration
             $table->float('costo')->nullable();
             $table->string('estado');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
