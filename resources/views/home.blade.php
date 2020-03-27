@@ -53,6 +53,7 @@
                 @endforeach
             </tbody>
         </table>
+        <a href="{{ url()->previous() }}" class="btn btn-success">Volver</a>
         <div class="d-flex align-content-center">
             <form method="post" action="{{url('/order')}}">
                 @csrf

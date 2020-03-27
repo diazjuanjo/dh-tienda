@@ -76,6 +76,7 @@
                 @endif
             </tbody>
         </table>
+        <a href="{{ url()->previous() }}" class="btn btn-success">Volver</a>
         @if(count(auth()->user()->order->items) != 0)
         <div class="d-flex align-content-center">
             <form method="post" action="{{url('/order')}}" id="formCarrito">

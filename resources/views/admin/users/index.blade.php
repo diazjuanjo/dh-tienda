@@ -47,9 +47,9 @@
       </tbody>
     </table>
     {{$users->links()}}
-
   </div>
   <!-- /.row -->
+  <a href="{{ url()->previous() }}" class="btn btn-success">Volver</a>
 
 </div>
 <!-- /.container -->

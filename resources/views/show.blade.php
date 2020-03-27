@@ -31,7 +31,7 @@
                 </div>
             </div>
             <!-- /.card -->
-
+            <a href="{{ url()->previous() }}" class="btn btn-success">Volver</a>
             <!-- Button trigger modal -->
             @if(auth()->user())
             <button type="button" class="btn btn-success my-4" data-toggle="modal" data-target="#exampleModalCentered">

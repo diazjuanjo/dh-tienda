@@ -6,14 +6,14 @@
 
     <div class="row">
 
-        <ul class="nav nav-pills mb-4">
+        <!-- <ul class="nav nav-pills mb-4">
             <li class="nav-item">
-                <a class="nav-link disabled" href="{{url('/carrito')}}">Carrito de Compras</a>
+                <a class="nav-link disabled" href="#">Carrito de Compras</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="{{url('/order')}}">Pedidos realizados</a>
+                <a class="nav-link disabled" href="#">Pedidos realizados</a>
             </li>
-        </ul>
+        </ul> -->
 
         <table class="table">
             <thead class="thead-dark">
@@ -64,10 +64,7 @@
             </tbody>
         </table>
         <div class="d-flex align-content-center">
-            <form method="get" action="{{url('/order')}}">
-                @csrf
-                <button type="submit" class="btn btn-success">Volver</button>
-            </form>
+        <a href="{{ url()->previous() }}" class="btn btn-success">Volver</a>
         </div>
     </div>
     <!-- /.row -->

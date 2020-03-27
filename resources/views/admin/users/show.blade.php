@@ -31,6 +31,7 @@
                 @endforeach
             </tbody>
         </table>
+        <a href="{{ url()->previous() }}" class="btn btn-success">Volver</a>
 
     </div>
     <!-- /.row -->

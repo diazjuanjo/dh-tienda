@@ -47,8 +47,9 @@
             <!-- /.row -->
             <div class="row">
                 {{$products->links()}}
+                <a href="{{ url()->previous() }}" class="btn btn-success">Volver</a>
             </div>
-
+            
         </div>
         <!-- /.col-lg-9 -->
 
