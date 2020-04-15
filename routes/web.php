@@ -21,23 +21,24 @@ Route::get('/', function () {
     $categories = Category::has('products')->get();
     return view('welcome')->with(compact('products','categories'));
 });
+Route::get('/products/{id}','Product2Controller@show'); 
+Route::get('/categories/{id}','Category2Controller@show');
+// Route::get('/search','SearchController@show');
+
 
 Auth::routes();
 
-Route::get('/carrito', 'CarritoController@index');
-Route::get('/order', 'OrderController@index');
-Route::get('/order/{id}', 'OrderController@show');
-Route::get('/products/{id}','Product2Controller@show'); 
-Route::post('/item','ItemController@store');
-Route::post('/item/{id}','ItemController@update');
-Route::delete('/item','ItemController@destroy');
-Route::post('/order','OrderController@update');
-Route::get('/categories/{id}','Category2Controller@show');
-Route::get('/search','SearchController@show');
 
 
-
-
+Route::middleware(['auth'])->group(function(){
+    Route::get('/carrito', 'CarritoController@index');
+    Route::get('/order', 'OrderController@index');
+    Route::get('/order/{id}', 'OrderController@show');
+    Route::post('/order','OrderController@update');
+    Route::post('/item','ItemController@store');
+    Route::post('/item/{id}','ItemController@update');
+    Route::delete('/item','ItemController@destroy');
+});
 
 Route::middleware(['auth','admin'])->group(function(){
     Route::get('/admin/products','ProductController@index'); // listado
