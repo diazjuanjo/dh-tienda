@@ -14,7 +14,7 @@ Ejecutar en terminal
 
 `cd dh-tienda`
 
-`composer install`
+`composer update`
 
 crear archivo .env 
 
@@ -24,6 +24,6 @@ crear archivo .env
 
 `php artisan db:seed`
 
-`php storage:link`
+`php artisan storage:link`
 
 `php artisan serv`
